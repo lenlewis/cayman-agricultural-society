@@ -17,14 +17,15 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-[#027373]/70 via-[#04ADBF]/50 to-[#04BFBF]/60"></div>
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="mb-8">
-          <div className="w-32 h-32 mx-auto bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-            <svg
-              className="w-20 h-20 text-white"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
+          <div className="w-36 h-36 mx-auto bg-white rounded-full flex items-center justify-center shadow-xl overflow-hidden">
+            <Image
+              src="/images/logo.jpg"
+              alt="Cayman Islands Agricultural Society Logo"
+              width={144}
+              height={144}
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">

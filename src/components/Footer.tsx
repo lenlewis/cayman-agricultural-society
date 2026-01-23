@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -6,9 +8,18 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              CI Agricultural Society
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/images/logo.jpg"
+                alt="Cayman Islands Agricultural Society Logo"
+                width={48}
+                height={48}
+                className="rounded-full"
+              />
+              <h3 className="text-xl font-bold">
+                CI Agricultural Society
+              </h3>
+            </div>
             <p className="text-white/80">
               Supporting and promoting agriculture in the Cayman Islands since
               1965.

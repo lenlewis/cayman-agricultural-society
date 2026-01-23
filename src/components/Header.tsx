@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,8 +19,17 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <a href="#home" className="text-white font-bold text-xl">
-              CI Agricultural Society
+            <a href="#home" className="flex items-center gap-3">
+              <Image
+                src="/images/logo.jpg"
+                alt="Cayman Islands Agricultural Society Logo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <span className="text-white font-bold text-lg hidden sm:inline">
+                CI Agricultural Society
+              </span>
             </a>
           </div>
 
