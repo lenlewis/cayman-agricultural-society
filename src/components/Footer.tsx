@@ -47,6 +47,14 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="#calendar"
+                  className="text-white/80 hover:text-[#04BFBF] transition-colors"
+                >
+                  Calendar
+                </a>
+              </li>
+              <li>
+                <a
                   href="#hours"
                   className="text-white/80 hover:text-[#04BFBF] transition-colors"
                 >
