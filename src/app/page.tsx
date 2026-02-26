@@ -1,3 +1,6 @@
+import Calendar from '@/components/Calendar';
+import AdminLogin from '@/components/AdminLogin';
+import AdminDashboard from '@/components/AdminDashboard';
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
