@@ -1,4 +1,12 @@
-"use client";
+'use client';
+import { useState } from 'react';
+// ... your other imports
+
+export default function Home() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [showAdmin, setShowAdmin] = useState(false);
+
+  // ... rest of your component
 
 import { useState } from "react";
 import Image from "next/image";
