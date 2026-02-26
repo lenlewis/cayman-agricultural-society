@@ -1,22 +1,22 @@
 'use client';
-import { useState } from 'react';
-// ... your other imports
-
-export default function Home() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [showAdmin, setShowAdmin] = useState(false);
-
-  // ... rest of your component
 
 import { useState } from "react";
 import Image from "next/image";
+import AdminLogin from "./AdminLogin";
 
-export default function Header() {
+interface HeaderProps {
+  loggedIn: boolean;
+  onLogin: () => void;
+  onOpenDashboard: () => void;
+}
+
+export default function Header({ loggedIn, onLogin, onOpenDashboard }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
+    { href: "#calendar", label: "Calendar" },
     { href: "#hours", label: "Hours" },
     { href: "#location", label: "Location" },
     { href: "#contact", label: "Contact" },
@@ -41,7 +41,7 @@ export default function Header() {
             </a>
           </div>
 
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6 items-center">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -51,6 +51,16 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
+            {loggedIn ? (
+              <button
+                onClick={onOpenDashboard}
+                className="bg-[#7EA629] hover:bg-[#6b8f22] text-white px-5 py-1.5 rounded-full text-sm font-semibold transition-colors duration-200"
+              >
+                Dashboard
+              </button>
+            ) : (
+              <AdminLogin onLogin={onLogin} />
+            )}
           </nav>
 
           <button
@@ -95,6 +105,18 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
+            <div className="pt-2">
+              {loggedIn ? (
+                <button
+                  onClick={() => { onOpenDashboard(); setIsMenuOpen(false); }}
+                  className="bg-[#7EA629] hover:bg-[#6b8f22] text-white px-5 py-2 rounded-full text-sm font-semibold transition-colors w-full"
+                >
+                  Dashboard
+                </button>
+              ) : (
+                <AdminLogin onLogin={() => { onLogin(); setIsMenuOpen(false); }} />
+              )}
+            </div>
           </nav>
         )}
       </div>
