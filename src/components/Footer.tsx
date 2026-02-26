@@ -55,6 +55,14 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="#gallery"
+                  className="text-white/80 hover:text-[#04BFBF] transition-colors"
+                >
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a
                   href="#hours"
                   className="text-white/80 hover:text-[#04BFBF] transition-colors"
                 >
