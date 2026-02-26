@@ -17,6 +17,7 @@ export default function Header({ loggedIn, onLogin, onOpenDashboard }: HeaderPro
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#calendar", label: "Calendar" },
+    { href: "#gallery", label: "Gallery" },
     { href: "#hours", label: "Hours" },
     { href: "#location", label: "Location" },
     { href: "#contact", label: "Contact" },
