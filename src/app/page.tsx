@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Calendar from '@/components/Calendar';
+import Gallery from '@/components/Gallery';
 import AdminDashboard from '@/components/AdminDashboard';
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -26,6 +27,7 @@ export default function Home() {
         <Hero />
         <About />
         <Calendar />
+        <Gallery />
         <Hours />
         <Location />
         <Contact />
